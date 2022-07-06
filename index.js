@@ -1,23 +1,35 @@
-function calculator(a,b) {
+
+function calculator(op ,a ,b) {
+  if(!+a || !+b)
   
+  return console.log('Insira apenas números')
+    
+  let result;
   
   switch(op){
-    case 'sum':
-      a + b
+    case '+':
+      result = a + b
+      console.log(`${a} + ${b} = ${result}`)
       break;
-    case 'minus':
-      a - b
+    case '-':
+      result = a - b
+      console.log(`${a} - ${b} = ${result}`)
       break;
-    case 'multiply':
-      a * b
+    case '*':
+      result = a * b
+      console.log(`${a} * ${b} = ${result}`)
       break;
-    case 'divide':
-      a / b
+    case '/':
+      result = a / b
+      console.log(`${a} / ${b} = ${result}`)
       break;
-    case 'module':
-      a % b
+    case '%':
+      result = a % b
+      console.log(`${a} % ${b} = ${result}`)
       break;
     default:
       console.log('Operation Not Defined')
   }
 }
+
+calculator('+', '5', 5)
