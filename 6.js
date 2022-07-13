@@ -29,4 +29,4 @@ function chessPiecesMovements(piece){
   return result
 }
 
-console.log(chessPiecesMovements('kindsg'))
+console.log(chessPiecesMovements('king'))

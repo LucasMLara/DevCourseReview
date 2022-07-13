@@ -14,8 +14,8 @@ function setProfit(cost, sellPrice) {
     return 'Não haverá lucro algum'
   }
   
-  return sellPrice - taxedCost;
+  return (sellPrice - taxedCost) * 1000;
   
 }
 
-console.log(setProfit(90, 20))
+console.log(setProfit(90, 150))

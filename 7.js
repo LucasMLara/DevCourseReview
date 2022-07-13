@@ -23,4 +23,4 @@ function setAmericanGrades(grade) {
   return result;
 }
 
-console.log(setAmericanGrades(90));
+console.log(setAmericanGrades(85));
