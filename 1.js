@@ -1,8 +1,9 @@
 
 function calculator(op ,a ,b) {
-  if(!+a || !+b)
-  
-  return console.log('Insira apenas números')
+
+  if(typeof a !== 'number' || typeof b !== 'number') {
+    return result = 'Insira apenas números'
+  }
     
   let result;
   
@@ -33,3 +34,12 @@ function calculator(op ,a ,b) {
 }
 
 calculator('+', '5', 5)
+
+// outro teste
+
+function evalCalc(a, op, b) {
+  let result = eval(`${a}${op}${b}`)
+  console.log(result)
+}
+
+evalCalc(1,'+',2)

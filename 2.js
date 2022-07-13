@@ -1,7 +1,8 @@
 function whoIsGreater(a, b) {
 
-  if(!+a || !+b)
-  return console.log('Insira apenas números')
+  if(typeof a !== 'number' || typeof b !== 'number') {
+    return result = 'Insira apenas números'
+  }
 
   if(a > b){
     return console.log(`${a} is Greater than ${b}`)

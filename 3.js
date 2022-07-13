@@ -1,7 +1,8 @@
 function greaterOfThreeNumbers(a, b, c) {
 
-  if(!+a || !+b)
-  return console.log('Insira apenas números')
+  if(typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
+    return result = 'Insira apenas números'
+  }
 
   if(a > b && a > c){
     return console.log(`${a} is Greater than ${b} and ${c}`)
