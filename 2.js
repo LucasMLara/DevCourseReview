@@ -1,10 +1,10 @@
 function revertWord(word) {
   
-  let reversedWord = '';
-  
   if(typeof word !== 'string') {
     return "Insira uma palavra"
   }
+  
+  let reversedWord = '';
 
   for(let i = 0; i < word.length; i++){
     reversedWord += word[word.length - 1 - i];
@@ -12,7 +12,8 @@ function revertWord(word) {
   return reversedWord
 }
 
-console.log(revertWord('alo'))
+revertWord('Teste')
+
 
 function revertWordFancy(word) {
   
