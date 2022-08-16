@@ -47,15 +47,15 @@ function redirectTo() {
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
-function murilo(color) {
+function changeColor(color) {
 
   return (e) => {
     e.target.style.color = color
   }
 }
 
-myWebpage.addEventListener('mouseover', murilo('red'))
-myWebpage.addEventListener('mouseleave', murilo('unset'))
+myWebpage.addEventListener('mouseover', changeColor('red'))
+myWebpage.addEventListener('mouseleave', changeColor('unset'))
 
 // Segue abaixo um exemplo do uso de event.target:
 
