@@ -14,11 +14,11 @@
 //
 //
 // console.log(newEmployees(newEmployee))
-
+//
 // const sorteio = () => {
 //
 // }
-
+//
 // const generateNumber = () => {
 //     return Math.round(Math.random() * 5)
 // }
@@ -31,7 +31,7 @@
 // }
 //
 // console.log(contest(4, generateNumber()))
-
+//
 // const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 // const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 //
@@ -57,3 +57,58 @@
 // }
 //
 // console.log(studentPerformance(RIGHT_ANSWERS, STUDENT_ANSWERS, verificaAcertos))
+
+const dragon = {
+    healthPoints: 350,
+    strength: 50,
+    damage: undefined,
+};
+
+const dragonDamage = (dragon) => {
+    const minDamage = 15
+    return  Math.round(Math.random() * 35) + minDamage
+}
+
+const warrior = {
+    healthPoints: 200,
+    strength: 30,
+    weaponDmg: 2,
+    damage: undefined,
+};
+
+const warriorDamage = (warrior) => {
+    const minDamage = warrior.strength
+    const warriorMaxDamage = warrior.strength * warrior.weaponDmg
+    return  Math.round(Math.random() * (warriorMaxDamage - minDamage)) + minDamage
+}
+
+const mage = {
+    healthPoints: 130,
+    intelligence: 45,
+    mana: 125,
+    damage: undefined,
+};
+
+const mageDamage = (mage) => {
+
+    let mageMana = mage.mana
+    const minDamage = mage.intelligence
+    const maxDamage = mage.intelligence  * 2
+    let mageDamage = Math.round(Math.random() * (maxDamage - minDamage)) + minDamage
+
+    let roundStatus = {
+        mageDamage,
+        manaSpent : 15
+    }
+    if (mageMana < 15) {
+        roundStatus.mageDamage = 'Not enough Mana...'
+        roundStatus.manaSpent = 0
+    }
+    return roundStatus
+}
+
+const battleMembers = { mage, warrior, dragon };
+
+const gameActions = {
+    warriorAction :  () => {},
+};
